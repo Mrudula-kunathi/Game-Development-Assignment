@@ -1,103 +1,73 @@
-/* Global styles */
+
 html, body {
-  height: 100%;
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color, black);
-  background-color: #ff8585;
-  background: linear-gradient(162deg, rgba(255, 133, 133, 1) 0%, rgba(227, 84, 95, 1) 100%);
+  height: 100%;
+  background-color: cyan;
+  margin: 0;
+  background: linear-gradient(162deg, rgb(133, 253, 255) 0%, rgb(84, 177, 227) 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Footer styles */
+
 footer {
   font-size: 0.8em;
-  margin-top: 20px;
   text-align: center;
+  margin-top: 20px;
 }
 
-/* Responsive styles */
+
 @media (min-height: 425px) {
   body {
     --size: 25px;
   }
 
   footer {
-    height: 40px;
     font-size: 1em;
+    height: 40px;
   }
 }
 
-/* Container styles */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.conEle {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Header styles */
+
 header {
-  display: flex;
+  font-weight: 900;
   justify-content: space-between;
   width: calc(var(--size, 15px) * 17);
+  display: flex;
   font-size: 2em;
-  font-weight: 900;
 }
 
-/* Grid styles */
-.grid {
+
+.box {
+  border: var(--size, 15px) solid var(--color, black);
+  grid-template-rows: repeat(15, auto);
   display: grid;
   grid-template-columns: repeat(15, auto);
-  grid-template-rows: repeat(15, auto);
-  border: var(--size, 15px) solid var(--color, black);
 }
 
-/* Tile styles */
-.tile {
+
+.piece {
+  height: var(--size, 15px);
   position: relative;
   width: var(--size, 15px);
-  height: var(--size, 15px);
 }
 
-/* Content styles */
-.content {
+
+.gameBox {
+  height: 100%;
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 
-/* Footer link styles */
+
 footer a:visited {
   color: inherit;
-}
-
-/* YouTube logo and card styles */
-#youtube,
-#youtube-card {
-  display: none;
-}
-
-@media (min-height: 425px) {
-  #youtube {
-    z-index: 2;
-    display: block;
-    width: 100px;
-    height: 70px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: white;
-    border-radius: 50% / 11%;
-    transform: scale(0.8);
-    transition: transform 0.5s;
-  }
-
-  #youtube:hover,
-  #youtube:focus {
-    transform: scale(0.9);
-    background: red;
-  }
-
-  /* Other styles for YouTube logo and card */
 }
